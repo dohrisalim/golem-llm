@@ -1,0 +1,3 @@
+[deps]
+
+golem:search = { path = "../.." } 

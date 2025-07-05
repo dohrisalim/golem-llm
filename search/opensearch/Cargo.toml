@@ -1,0 +1,21 @@
+[package]
+name = "golem-search-opensearch"
+version = "0.1.0"
+edition = "2021"
+authors = ["Golem Cloud <hello@golem.cloud>"]
+license = "Apache-2.0"
+publish = false
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+golem-rust = "1.6.0"
+log = "0.4.27"
+serde = { workspace = true }
+serde_json = { workspace = true }
+wit-bindgen-rt = { workspace = true }
+wit-bindgen = "0.40.0"
+url = "2.5.2"
+thiserror = "1.0.64"
+envconfig = "0.10.0"

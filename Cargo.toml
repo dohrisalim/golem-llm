@@ -8,6 +8,8 @@ members = [
     "llm/ollama",
     "llm/openai",
     "llm/openrouter",
+    "llm/exec-js",
+    "llm/exec-py",
 ]
 
 [profile.release]

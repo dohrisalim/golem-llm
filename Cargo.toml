@@ -8,6 +8,11 @@ members = [
     "llm/ollama",
     "llm/openai",
     "llm/openrouter",
+    "search/elastic",
+    "search/opensearch",
+    "search/algolia",
+    "search/typesense",
+    "search/meilisearch",
 ]
 
 [profile.release]

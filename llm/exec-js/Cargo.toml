@@ -1,0 +1,36 @@
+[package]
+name = "golem-exec-js"
+version = "0.1.0"
+edition = "2021"
+authors = ["Golem Cloud <contact@golem.cloud>"]
+description = "JavaScript execution component using QuickJS"
+license = "Apache-2.0"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wit-bindgen = "0.40.0"
+wit-bindgen-rt = "0.40.0"
+# Using a process-based approach instead of embedded engine
+base64 = "0.22.1"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+log = "0.4.27"
+env_logger = "0.11.5"
+anyhow = "1.0.86"
+thiserror = "1.0.64"
+hex = "0.4.3"
+tempfile = "3.3.0"
+
+[target.'cfg(not(target_arch = "wasm32"))'.dependencies]
+wait-timeout = "0.2.0"
+
+[package.metadata.component]
+package = "golem:exec"
+
+[package.metadata.component.bindings]
+generate_unused_types = true
+
+[package.metadata.component.target]
+path = "wit"
